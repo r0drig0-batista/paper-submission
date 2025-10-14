@@ -1,4 +1,4 @@
-MiNER: A Two-Stage Pipeline for Metadata Extraction from Municipal Meeting Minutes
+# MiNER: A Two-Stage Pipeline for Metadata Extraction from Municipal Meeting Minutes
 
 A two-stage framework for **automatic metadata extraction** from municipal meeting minutes, combining **Question Answering (QA)** for segment boundary detection and **Named Entity Recognition (NER)** for fine-grained metadata extraction.  
 This repository supports the experiments presented in the accompanying paper, providing all code, data splits. The trained models are available on Hugging Face.
