@@ -182,7 +182,7 @@ python3 model.py
 
 Each file (`dataset_metadata_[lang]/municipality.json`) follows the structure below:
 
-```json
+```bash
 {
   "documents": {
     "Municipality_Name": {
