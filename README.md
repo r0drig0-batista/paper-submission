@@ -88,9 +88,7 @@ Prerequisites
 
 Setup Steps
 
-    Clone the repository
-
-git clone https://github.com/your-org/citilink_nlp.git       			MUDAR AQUI
+    Clone the repository  
 
     Create and activate a virtual environment
 
@@ -100,7 +98,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
     Install dependencies
 
 pip install -r requirements.txt
-
+```
 
 ---
 
