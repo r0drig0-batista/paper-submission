@@ -160,26 +160,29 @@ python3 model.py
 ```
 
 
-8. Dataset Description
+---
 
-Overview
+## 8. Dataset Description
 
-Dataset Name: 				Council Metadata Corpus
-Languages: 				Portuguese and English
-Documents: 				6 municipalities × 20 minutes (2021–2024)
-Total Tokens:				1,170,417 tokens
-Total Tokens in Metadata Segments : 	32,364 tokens
-Total Metadata Segments: 		180 segments
-Annotation Fields:
+### Overview
 
-date, minute_id, meeting_type, begin_time, end_time, location, participants (with role, presence, and party)
+| Attribute | Description |
+|------------|-------------|
+| **Dataset Name** | Council Metadata Corpus |
+| **Languages** | Portuguese and English |
+| **Documents** | 6 municipalities × 20 minutes (2021–2024) |
+| **Total Tokens** | 1,170,417 |
+| **Tokens in Metadata Segments** | 32,364 |
+| **Total Metadata Segments** | 180 |
+| **Annotation Fields** | `date`, `minute_id`, `meeting_type`, `begin_time`, `end_time`, `location`, `participants` (with `role`, `presence`, and `party`), `opening_segment`, `closing_segment` |
 
-opening_segment, closing_segment
+---
 
-Format:
-Each file (dataset_metadata_[lang]/municipality.json) contains:
+### Format
 
-```bash
+Each file (`dataset_metadata_[lang]/municipality.json`) follows the structure below:
+
+```json
 {
   "documents": {
     "Municipality_Name": {
@@ -202,8 +205,6 @@ Each file (dataset_metadata_[lang]/municipality.json) contains:
   }
 }
 ```
-
-## 8. Dataset Description
 
 ### Data Files
 
