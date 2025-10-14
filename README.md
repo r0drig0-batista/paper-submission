@@ -117,15 +117,17 @@ This section describes how to build datasets, train models, and reproduce the re
 ```bash
 python3 build_qa_dataset.py --lang pt
 python3 build_qa_dataset.py --lang en
-
+```
 
 Train Model
 
+```bash
 python3 train_qa.py \
   --lang pt \
   --num_train_epochs 3 \
   --per_device_train_batch_size 8 \
   --fp16
+```
 
 Models:
 
@@ -139,18 +141,23 @@ Goal: Extract structured metadata entities from minutes.
 
 Convert Metadata → BIO
 
+```bash
 python3 process_to_bio.py \
   --input_dir data/dataset_metadata_pt \
   --output_dir data/metadata_final
+```
   
 Tokenize & Align Labels
 
+```bash
 python3 transform_dataset.py
+```
 
 Train NER Model
 
+```bash
 python3 model.py
-
+```
 
 
 8. Dataset Description
@@ -172,6 +179,7 @@ opening_segment, closing_segment
 Format:
 Each file (dataset_metadata_[lang]/municipality.json) contains:
 
+```bash
 {
   "documents": {
     "Municipality_Name": {
@@ -193,7 +201,7 @@ Each file (dataset_metadata_[lang]/municipality.json) contains:
     }
   }
 }
-
+```
 
 ## 8. Dataset Description
 
@@ -201,9 +209,9 @@ Each file (dataset_metadata_[lang]/municipality.json) contains:
 
 The data files for the **Council Metadata Corpus** are located in the `data/` directory:
 
-    dataset_metadata_en — Portuguese version (6 files with 20 documents each)
-    dataset_metadata_pt — English version (6 files with 20 documents each)
-    split — Train/val/test split information
+  -  dataset_metadata_en — Portuguese version (6 files with 20 documents each)
+  -  dataset_metadata_pt — English version (6 files with 20 documents each)
+  -  split — Train/val/test split information
 
 
 Each JSON file corresponds to one municipality and contains the full text of the meeting minute, along with manually annotated metadata fields.
